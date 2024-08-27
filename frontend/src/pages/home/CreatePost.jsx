@@ -1,11 +1,9 @@
 import { CiImageOn } from "react-icons/ci";
 import { BsEmojiSmileFill } from "react-icons/bs";
 import { useRef, useState } from "react";
-import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-
 import { IoCloseSharp } from "react-icons/io5";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { toast } from "react-hot-toast";
-
 const CreatePost = () => {
 	const [text, setText] = useState("");
 	const [img, setImg] = useState(null);
@@ -48,12 +46,9 @@ const CreatePost = () => {
 		},
 	});
 
-
-	
-
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		createPost({ text, img });
+		createPost({text,img});
 	};
 
 	const handleImgChange = (e) => {
@@ -102,7 +97,7 @@ const CreatePost = () => {
 						/>
 						<BsEmojiSmileFill className='fill-primary w-5 h-5 cursor-pointer' />
 					</div>
-					<input type='file' accept='image/*' hidden ref={imgRef} onChange={handleImgChange} />
+					<input type='file' hidden ref={imgRef} onChange={handleImgChange} />
 					<button className='btn btn-primary rounded-full btn-sm text-white px-4'>
 						{isPending ? "Posting..." : "Post"}
 					</button>
