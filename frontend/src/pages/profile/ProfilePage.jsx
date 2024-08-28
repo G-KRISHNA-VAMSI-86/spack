@@ -15,7 +15,7 @@ import { useQuery } from "@tanstack/react-query";
 import { formatMemberSinceDate } from "../../utils/date";
 
 import useFollow from "../../hooks/useFollow";
-import useUpdateUserProfile from "../../hooks/useUpdataUserProfile";
+import useUpdateUserProfile from "../../hooks/useUpdateUserProfile";
 
 
 
@@ -177,7 +177,7 @@ const ProfilePage = () => {
 											<>
 												<FaLink className='w-3 h-3 text-slate-500' />
 												<a
-													href='https://youtube.com/@asaprogrammer_'
+													href=''
 													target='_blank'
 													rel='noreferrer'
 													className='text-sm text-blue-500 hover:underline'
