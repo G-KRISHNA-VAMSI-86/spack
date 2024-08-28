@@ -35,7 +35,6 @@ export const createPost = async (req, res) => {
 	}
 };
 
-
 export const deletePost = async (req, res) => {
 	try {
 		const post = await Post.findById(req.params.id);
